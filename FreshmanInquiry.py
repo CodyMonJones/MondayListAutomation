@@ -5,7 +5,10 @@ from openpyxl import Workbook
 wb = Workbook()
 
 #Creates each sheet in excel workbook we created above
-ws = wb.active
+ws = wb.active #This sheet is a default sheet created when making a new workbook
+ws.title = "IGNORE"  # Declaring the Title for our default worksheek
+
+#Titles for our subsequent worksheets
 ws1 = wb.create_sheet("MAE")
 ws2 = wb.create_sheet("CSE")
 ws3 = wb.create_sheet("EE")
@@ -13,8 +16,6 @@ ws4 = wb.create_sheet("IE")
 ws5 = wb.create_sheet("BE")
 ws6 = wb.create_sheet("CE")
 
-#Declaring the Title for each worksheet
-ws.title = "IGNORE"
 
 """
 
